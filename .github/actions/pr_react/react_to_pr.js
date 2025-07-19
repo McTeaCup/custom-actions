@@ -16,6 +16,8 @@ async function run() {
 
     const newIssue = await bot.rest.issues.create({
         ...context.repo,
+        owner: context.owner,
+        repo: context.repo,
         title: `Test PR issue`,
         body: `A new pull request has been created by ${author.toString()} at ${time}`
     });
