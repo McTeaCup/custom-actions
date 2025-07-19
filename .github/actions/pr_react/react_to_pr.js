@@ -12,13 +12,15 @@ async function run() {
     let currentDate = new Date().toJSON().slice(0, 10);
     let currentTime = new Date().toJSON().slice(11, 16);
 
+    const time = `${currentDate} (${currentTime})`
+
     console.log(`A new pull request has been created by ... at ${currentDate} (${currentTime} UTC+0)`)
 
     const newComment = await bot.rest.issues.create({
         ...context,
         owner: context.owner,
         repo: context.repo,
-        body: `A new pull request has been created by ${author.toString()} at ${new Date.toJSON}`
+        body: `A new pull request has been created by ${author.toString()} at ${time}`
     });
 }
 
