@@ -8,4 +8,4 @@ inputs:
 
 runs:
    using: node20
-   main: '../react_to_pr.js'
+   main: 'react_to_pr.js'
