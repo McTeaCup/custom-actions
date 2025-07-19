@@ -1,0 +1,11 @@
+name: PR react
+description: "Creates a comment on a newly opend PR"
+
+inputs:
+  pr_author:
+    description: The user who created the PR
+    default: "Unknown"
+
+runs:
+   using: node20
+   main: '../react_to_pr.js'

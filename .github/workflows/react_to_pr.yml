@@ -1,0 +1,15 @@
+name: React On PR
+on: pull_request
+
+jobs:
+    checkout_repo:
+        runs-on: ubunut-lastest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+            
+            - name: Install packages
+              run: npm install 
+
+            - name: Use custom action
+              uses: ./pr_react 
