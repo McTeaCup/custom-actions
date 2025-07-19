@@ -2,8 +2,12 @@ name: PR react
 description: "Creates a comment on a newly opend PR"
 
 inputs:
-  myToken:
+  token:
     description: The user who created the PR
+    required: true
+  
+  pr_number:
+    description: Unique identifier for the PR
     required: true
 
 runs:
