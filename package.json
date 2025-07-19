@@ -1,0 +1,24 @@
+{
+  "name": "custom-actions",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "../dist/react_to_pr.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/McTeaCup/custom-actions.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/McTeaCup/custom-actions/issues"
+  },
+  "homepage": "https://github.com/McTeaCup/custom-actions#readme",
+  "description": "",
+  "dependencies": {
+    "@actions/core": "^1.11.1",
+    "@actions/github": "^6.0.1"
+  }
+}
