@@ -1,5 +1,5 @@
 name: React On PR
-on: pull_request
+on: [pull_request, workflow_dispatch]
 
 jobs:
     checkout_repo:
