@@ -2,9 +2,9 @@ name: PR react
 description: "Creates a comment on a newly opend PR"
 
 inputs:
-  pr_author:
+  myToken:
     description: The user who created the PR
-    default: "Unknown"
+    required: true
 
 runs:
    using: node20
