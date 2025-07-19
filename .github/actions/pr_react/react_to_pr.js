@@ -14,12 +14,9 @@ async function run() {
 
     const time = `${currentDate} (${currentTime})`
 
-    console.log(`A new pull request has been created by ... at ${currentDate} (${currentTime} UTC+0)`)
-
-    const newComment = await bot.rest.issues.create({
-        ...context,
-        owner: context.owner,
-        repo: context.repo,
+    const newIssue = await bot.rest.issues.create({
+        ...context.repo,
+        title: `Test PR issue`,
         body: `A new pull request has been created by ${author.toString()} at ${time}`
     });
 }
