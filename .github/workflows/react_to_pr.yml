@@ -1,9 +1,9 @@
 name: React On PR
-on: pull_request
+on: [pull_request, workflow_dispatch]
 
 jobs:
     checkout_repo:
-        runs-on: ubunut-lastest
+        runs-on: ubuntu-latest
         steps:
             - name: Checkout
               uses: actions/checkout@v4
@@ -12,4 +12,6 @@ jobs:
               run: npm install 
 
             - name: Use custom action
-              uses: ./pr_react 
+              uses: ./.github/actions/pr_react
+              with: 
+                myToken: ${{ secrets.GITHUB_TOKEN }}
