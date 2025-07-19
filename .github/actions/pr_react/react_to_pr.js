@@ -20,6 +20,6 @@ async function run() {
         repo: context.repo,
         body: `A new pull request has been created by ${author.toString()} at ${new Date.toJSON}`
     });
-
 }
 
+run();
