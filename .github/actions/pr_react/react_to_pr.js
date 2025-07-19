@@ -14,8 +14,7 @@ async function run() {
 
     const time = `${currentDate} (${currentTime})`
 
-    const newIssue = await bot.rest.issues.create({
-        ...context.repo,
+    bot.rest.issues.create({
         owner: context.owner,
         repo: context.repo,
         title: `Test PR issue`,
