@@ -3,7 +3,7 @@ on: [pull_request, workflow_dispatch]
 
 jobs:
     checkout_repo:
-        runs-on: ubunut-lastest
+        runs-on: ubuntu-latest
         steps:
             - name: Checkout
               uses: actions/checkout@v4
